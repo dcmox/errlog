@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>JSAlerts Demo</title>
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../css/demo.css" /> 
+        <link rel="stylesheet" type="text/css" href="../css/jsalerts.css" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../js/jsalerts.js"></script>
+        <script src="../js/errlogger.js"></script>
+        <script>
+            const onConfirm = () => {
+                document.getElementById('resultz').innerHTML = 'Confirmed!'
+            }
+            const onCancel = () => {
+                document.getElementById('result1').innerHTMrL = 'Cancelled!'
+            }
+            const onConfirmPrompt = (res) => document.getElementById('result').innerHTML = "Hello, " + (res || "unidentified person") + "!"
+        </script>
+	</head>
+	<body class="home">
+        <header>
+            <h1 id="logo">js<span>alerts</span></h1>
+            <nav class="desktop">
+                <a href="#" class="active">Demo</a>
+            </nav>
+
+            <nav class="mobile">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="#"><li>Demo</li></a>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <hr />
+        <main>
+            <h3>Simple Demo</h3>
+            <p>
+                <button onclick="alert('This is a test. I wonder how much text can actually fit.', 'Title');">Test with Title</button>
+            </p>
+            <p>
+                <button onclick="alert('This is a test without an actual title. A lot more text should actually fit!');">Test</button>
+            </p>
+            <p>
+                <button onclick="alert('Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?');">Test with lots of text</button>
+            </p>
+            <p>
+                <button onclick="confirm('Are you sure you want to proceed?', 'Confirm', onConfirm, onCancel);">Confirm</button>
+            </p>
+            <p>
+                <button onclick="prompt('What is your name?', '', onConfirmPrompt, onCancel);">Prompt</button>
+            </p>
+
+            <a href="http://www.google.com">Google</a>
+
+            <button onclick="aler();">Test</button>
+            <div id="result">
+        
+            </div>
+            <div style="height: 1000px">
+            </div>
+            <p>
+                <button onclick="confirm('Are you sure you want to proceed?', 'Confirm', onConfirm, onCancel);">Confirm</button>
+            </p>
+        </main>
+        <footer>
+            &copy; 2020 Daniel Moxon - <a href="https://github.com/dcmox/html-templates">GitHub.com</a>
+        </footer>
+    </body>
+    <!-- This demo was created by Daniel Moxon @ github.com/dcmox -->
+</html>
